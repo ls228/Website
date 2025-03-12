@@ -1,0 +1,85 @@
+/* About Page Styles */
+
+.about-container {
+    width: 100%;
+    min-height: 200vh; /* Ensure enough space for scrolling */
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    position: relative;
+  }
+  
+  .hero-video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+  }
+  
+  .background-fade {
+    position: absolute;
+    top: 100vh;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    z-index: -1;
+  }
+
+  .about-text {
+    max-width: 800px;
+    padding: 20px;
+    position: absolute;
+    top: 100vh; /* text hight */
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-align: left;
+    font-family: Helvetica, sans-serif;
+  }
+  h2 {
+    text-align: left;
+    font-family: Helvetica, sans-serif;
+  }
+  
+  p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    opacity: 0.9;
+    text-align: left;
+    font-family: Helvetica, sans-serif
+  }
+
+  .video-caption {
+    position: absolute;
+    bottom: 3%; /* Abstand vom unteren Rand */
+    left: 3%; /* Abstand vom linken Rand */
+    color: white;
+    font-size: 1.5rem;
+    font-family: Helvetica, sans-serif;
+    z-index: 2; /* Stellt sicher, dass der Text über dem Video sichtbar bleibt */
+    opacity: 1;
+  }
+
+  .logo {
+    position: fixed;
+    top: 1%; /* Abstand vom oberen Rand */
+    left: 3%; /* Abstand vom linken Rand */
+    font-size: 1.5rem;
+    font-family: Helvetica, sans-serif;
+    color: white;
+    font-weight: bold;
+    z-index: 3; /* Stellt sicher, dass es über allem bleibt */
+  }
+  
