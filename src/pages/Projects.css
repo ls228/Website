@@ -1,0 +1,45 @@
+.projects-container {
+    height: 100vh; /* No vertical scrolling */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    overflow-x: hidden;
+    perspective: 1500px; /* Enhances 3D depth */
+  }
+  
+  .intro-text, .outro-text {
+    position: fixed;
+    top: 10%;
+    font-size: 3rem;
+    z-index: 20;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .image-stack {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .project-image {
+    position: absolute;
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+  }
+  
+  .project-image img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  

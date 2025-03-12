@@ -1,0 +1,42 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 15px;
+    z-index: 1000;
+  }
+  
+  .menu-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .menu-overlay ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+  }
+  
+  .menu-overlay li {
+    margin: 20px 0;
+    font-size: 24px;
+  }
+  
+  .menu-overlay a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+  }
+  
+  .menu-overlay a:hover {
+    color: #f0a500;
+  }
+  
