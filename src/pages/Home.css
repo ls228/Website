@@ -33,11 +33,26 @@
     z-index: -1;
   }
 
-  .about-text {
+  .ramus-text {
     max-width: 800px;
     padding: 20px;
     position: absolute;
-    top: 100vh; /* text hight */
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .wwhoweare-text {
+    max-width: 800px;
+    padding: 20px;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .whatwedo-text {
+    max-width: 800px;
+    padding: 20px;
+    position: absolute;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
   }

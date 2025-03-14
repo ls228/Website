@@ -62,7 +62,7 @@ const Home = () => {
 
       {textVisible && (
         <motion.div 
-          className="about-text"
+          className="ramus-text"
           style={{ opacity: textOpacity }} 
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -72,18 +72,36 @@ const Home = () => {
           <p>
            is a global media architecture and lighting design studio based in Melbourne and Hong Kong.
           </p>
-
-          <h1>who we are</h1>
-          <p>
-          We are an artist-led design studio, founded and led by Light Artist Bruce Ramus. We are a multidisciplinary team from a wide range of experiences.
-          </p>
-
-          <h1>what we do</h1>
-          <h2>we make art with light.</h2>
-          <p>
-          We create large-scale luminous and digital artworks for architectural facades, city precincts, commercial spaces. We combine light, sculpture, digital media and interactive technology to create works for architectural projects and public spaces.
-          </p>
         </motion.div>
+        )}
+         {textVisible && (
+          <motion.div 
+            className="whoweare-text"
+            style={{ opacity: textOpacity }} 
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+          >
+            <h1>who we are</h1>
+            <p>
+            We are an artist-led design studio, founded and led by Light Artist Bruce Ramus. We are a multidisciplinary team from a wide range of experiences.
+            </p>
+          </motion.div>
+        )}
+          {textVisible && (
+            <motion.div 
+              className="whatwedo-text"
+              style={{ opacity: textOpacity }} 
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1 }}
+            >
+              <h1>what we do</h1>
+              <h2>we make art with light.</h2>
+              <p>
+              We are an artist-led design studio, founded and led by Light Artist Bruce Ramus. We are a multidisciplinary team from a wide range of experiences.
+              </p>
+            </motion.div>
       )}
     </div>
   );
