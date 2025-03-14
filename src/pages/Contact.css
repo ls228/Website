@@ -1,0 +1,23 @@
+/* Layout und Styling */
+.contact-container {
+    min-height: 250vh;
+    padding: 20px;
+    height: 200vh; /* Damit die Seite gescrollt werden kann */
+    background-color: black;
+  }
+  
+  .empty-space {
+    height: 100vh; /* Dieser Bereich nimmt den Platz des ersten Bildschirms ein */
+    background-color: black;
+  }
+  
+  .text-section {
+    opacity: 0; /* Zu Beginn unsichtbar */
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    margin-left: 40px;;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }

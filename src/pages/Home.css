@@ -1,100 +1,125 @@
 /* About Page Styles */
+html, body {
+  margin: 0;
+  padding: 0;
+}
 
-.about-container {
-    width: 100%;
-    min-height: 200vh; /* Ensure enough space for scrolling */
-    background-color: black;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    text-align: center;
-    position: relative;
-  }
-  
-  .hero-video-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-    z-index: -1;
-  }
-  
-  .background-fade {
-    position: absolute;
-    top: 100vh;
-    width: 100%;
-    height: 100vh;
-    background-color: black;
-    z-index: -1;
-  }
+.page-container {
+  min-height: 300vh; /* Ensure enough space for scrolling */
+}
 
-  .ramus-text {
-    max-width: 800px;
-    padding: 20px;
-    position: absolute;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-  }
-  
-  .wwhoweare-text {
-    max-width: 800px;
-    padding: 20px;
-    position: absolute;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-  }
-  
-  .whatwedo-text {
-    max-width: 800px;
-    padding: 20px;
-    position: absolute;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-  }
-  
-  h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    text-align: left;
-    font-family: Helvetica, sans-serif;
-  }
-  h2 {
-    text-align: left;
-    font-family: Helvetica, sans-serif;
-  }
-  
-  p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    opacity: 0.9;
-    text-align: left;
-    font-family: Helvetica, sans-serif
+.hero-video-container {
+  position: fixed; /* Fixiert das Video im Viewport */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh; /* Höhe des Containers auf die volle Höhe des Viewports setzen */
+  overflow: hidden; /* Überschüssigen Inhalt verbergen */
+  z-index: -1; /* Video hinter allen anderen Elementen anzeigen */
+}
+
+.hero-video {
+  width: 100%; /* Breite auf 100% des Containers setzen */
+  height: 100%; /* Höhe auf 100% des Containers setzen */
+  object-fit: cover; /* Sorgt dafür, dass das Video den gesamten Container ausfüllt */
+  object-position: center; /* Zentriert das Video im Container */
+}
+
+.background-fade {
+  position: absolute;
+  top: 100vh;
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  z-index: 0;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-align: left;
+  font-family: Helvetica, sans-serif;
+}
+h2 {
+  text-align: left;
+  font-family: Helvetica, sans-serif;
+}
+
+.home-text {
+  text-align: left;
+}
+
+.video-caption {
+  position: fixed;
+  bottom: 20px; /* Abstand vom unteren Rand */
+  left: 20px;   /* Abstand vom linken Rand */
+  z-index: 10;  /* Stellt sicher, dass der Text über dem Video bleibt */
+  color: white; /* Textfarbe anpassen, falls nötig */
+  padding: 20px; /* Etwas Abstand um den Text herum */
+}
+
+.logo {
+  position: fixed;
+  top: 0px;
+  left: 3%; 
+  font-size: 1.5rem;
+  font-family: Helvetica, sans-serif;
+  color: white;
+  font-weight: bold;
+  z-index: 3; 
+}
+.transparent-space {
+  height: 120vh; /* Dieser Bereich nimmt den Platz des ersten Bildschirms ein */
+  background-color: transparent;
+}
+
+/* Container für Bilder */
+.home-img-container {
+  display: flex;
+  justify-content: flex-start; /* Horizontal zentrieren */
+  align-items: flex-start; 
+  margin: 20px; /* Abstand zum Rand des Containers */
+  width: 100%;
+  max-width: 100%; /* Bild darf nicht größer als der Container werden */
+  height: 400px; /* Feste Höhe für die Bilder */
+  overflow: hidden; /* Überschüssiges Bild wird abgeschnitten */
+}
+
+/* Bilder im Container */
+.home-img-container img {
+  max-width: 100%; /* Verhindert, dass das Bild den Container überdeckt */
+  height: auto; /* Hält das Seitenverhältnis bei */
+  object-fit: contain; /* Bild bleibt innerhalb des Containers */
+  transition: transform 0.3s ease; /* Für den Hover-Effekt */
+  max-width: 50%;
+}
+
+@media (max-width: 768px) {
+  .page-container {
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-top: 0px;
   }
 
   .video-caption {
-    position: absolute;
-    bottom: 3%; /* Abstand vom unteren Rand */
-    left: 3%; /* Abstand vom linken Rand */
-    color: white;
-    font-size: 1.5rem;
-    font-family: Helvetica, sans-serif;
-    z-index: 2; /* Stellt sicher, dass der Text über dem Video sichtbar bleibt */
-    opacity: 1;
+    left: 0px;   /* Abstand vom linken Rand */
   }
 
-  .logo {
-    position: fixed;
-    top: 1%; /* Abstand vom oberen Rand */
-    left: 3%; /* Abstand vom linken Rand */
-    font-size: 1.5rem;
-    font-family: Helvetica, sans-serif;
-    color: white;
-    font-weight: bold;
-    z-index: 3; /* Stellt sicher, dass es über allem bleibt */
+  .home-img-container {
+    margin: 5px; /* Weniger Abstand auf kleineren Bildschirmen */
   }
-  
+
+  .home-img-container img {
+    max-width: 100%; /* Bildgröße anpassen für kleinere Geräte */
+  }
+}
+
+@media (max-width: 500px) {
+  .home-img-container {
+    margin: 5px; /* Noch weniger Abstand auf sehr kleinen Geräten */
+  }
+
+  .home-img-container img {
+    max-width: 100%; /* Bildgröße weiter anpassen */
+  }
+}

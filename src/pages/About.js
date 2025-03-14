@@ -43,7 +43,7 @@ const About = () => {
         style={{ opacity: backgroundFade }}
       ></motion.div>
 
-      {/* ✅ Smooth Text Fade In Without Glitch */}
+      {/* Smooth Text Fade In Without Glitch */}
       {textVisible && (
         <motion.div 
           className="about-text"
